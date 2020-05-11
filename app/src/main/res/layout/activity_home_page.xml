@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home_page">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:titleTextColor = "#000000"
+        app:title="Home Page"
+        app:menu="@menu/toolbar_icons"
+        android:id="@+id/toolbar"/>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:menu="@menu/navigation_items"
+        android:id="@+id/bottom_nav_bar"
+        app:itemIconTint="#000000"
+        app:labelVisibilityMode="labeled"
+        app:itemTextColor="#000000"
+        android:layout_alignParentBottom="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/relative_layout"
+        android:elevation="10dp"
+        android:id="@+id/progress_layout">
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:progressDrawable="@drawable/progress_bar"
+            android:progress="40"
+            android:max="100"
+            android:secondaryProgress="100"
+            android:indeterminate="false"
+            android:layout_centerHorizontal="true"/>
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true"
+            android:paddingLeft="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today's Sale"
+                android:textSize="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="50dp"
+                android:textColor="#FFFFFF"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs. 160,245"
+                android:textSize="23dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:text="1,000 UNITS"
+                android:textColor="#FFFFFF"
+                android:textSize="17dp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="New Orders"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:layout_marginLeft="160dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/order_layout"
+                android:elevation="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:text="Order Id : 123ADCG"
+                    android:id="@+id/order_id"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/order_id"
+                    android:textColor="#000000"
+                    android:text="Customer Name : John Smith"
+                    android:id="@+id/cust_name"
+                    android:layout_marginTop="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cust_name"
+                    android:textColor="#000000"
+                    android:text="Customer Phone No. : +91-9876543210"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/cust_phone"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cust_phone"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:text="Product : Teresmme Shampoo"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/product"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/product"
+                    android:textColor="#000000"
+                    android:text="Order Time : IST 7:30 P.M."
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/order_time"/>
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/product" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+</ScrollView>
+
+
+
+
+
+
+
+</RelativeLayout>

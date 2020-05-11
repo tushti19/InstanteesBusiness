@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/online_orders"
+        android:enabled="true"
+        android:title="Orders"
+        android:icon="@drawable/orders"
+        app:showAsAction="withText"/>
+    <item
+        android:id="@+id/payments"
+        android:enabled="true"
+        android:icon="@drawable/payment"
+        android:title="Payments"
+        app:showAsAction="withText"/>
+    <item
+        android:id="@+id/retailers"
+        android:enabled="true"
+        android:icon="@drawable/retailers"
+        android:title="Customers"
+        app:showAsAction="withText"
+        />
+    <item
+        android:id="@+id/settlements"
+        android:enabled="true"
+        android:icon="@drawable/settlement"
+        android:title="Settlements"
+        app:showAsAction="withText"
+        />
+    <item
+        android:id="@+id/products"
+        android:enabled="true"
+        android:icon="@drawable/products"
+        android:title="Products"
+        app:showAsAction="withText" />
+
+</menu>
